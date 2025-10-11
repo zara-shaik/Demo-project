@@ -2,6 +2,10 @@ pipeline {
     agent any
 
     stages {
+        stage('checkout from github'){
+          steps{
+            git branch:'main',url:'https://github.com/zara-shaik/Demo-project.git'
+        }
         stage('Build') {
             steps {
                 echo 'Building the project...'
